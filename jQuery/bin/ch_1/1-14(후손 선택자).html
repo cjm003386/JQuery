@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script src="js/jquery-3.6.0.js"></script>
+	<script>
+		$(document).ready(function(){
+		/* 후손 선택자
+			div 태그의 후손 ul에 스타일이 적용되었습니다. */
+			$('div ul').css('color', '#ff0000');
+		});
+		
+		
+	</script>
+</head>
+<body>
+	<!--  
+		1. A E - A요소에 포함되어 있는 요소 중 E요소를 선택한다.(후손요소)
+		2. A>E - A요소의 바로 아래에 포함되어 있는 E요소를 선택한다.(자식요소)
+		3. A+E - A요소의 다음으로 나오는 E요소를 선택한다.(형제요소)
+	 -->
+
+	<div>
+		<ul>
+			<li>Cat</li>
+			<li>Dog</li>
+			<li>Elephant</li>
+		</ul>
+	</div>
+	<div>
+		<p>개와 코끼리만 선택하세요</p>
+		<ul>
+			<li>고양이</li>
+			<li>개</li>
+			<li>코끼리</li>
+		</ul>
+	</div>
+</body>
+</html>

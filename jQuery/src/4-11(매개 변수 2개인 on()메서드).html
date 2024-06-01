@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.js"></script>
+<!--  매개 변수 2개인 on()메서드 -->
+<!--  추가된 p태그는 클릭해도 이벤트 발생하지 않습니다. -->
+
+	<script>
+		$(document).ready(function(){
+			
+			var count=0;
+			$('p').on('click', function(){
+				//after() : 선택자의 다음 형제위치에 추가합니다.
+				$(this).after("<p> 추가된 paragraph! " + count++ + "</p>");
+			});
+		});
+		
+	</script>
+</head>
+<body>
+	<p>Click me!</p>
+	<span>end</span>
+
+</body>
+</html>

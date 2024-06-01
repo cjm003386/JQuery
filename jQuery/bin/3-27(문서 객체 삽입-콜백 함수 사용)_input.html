@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.js"></script>
+<style>
+* {text-align:center;}
+
+table {margin:0 auto; width:50%; font-size:20px; border-collapse:collapse;}
+tr {height:50px; border-bottom:1px solid gray;}
+tbody tr:hover {background:orange;}
+tbody tr:first-child {background-color:pink;}
+caption {color:green; font-size:30px;font-weight:bold;}
+</style>
+
+<script>
+	/*
+	$(document).ready(function(){
+	var a = prompt("추가 할 이름을 입력하세요");
+	var number = parseInt($('tbody>tr:last-child>td:first-child').text());
+		$('tbody').append('<tr>' + '<td>' + (number + 1) + '</td>' +
+							'<td>' + a + '</td>' +
+							'</tr>');
+		
+	}); */
+	$(document).ready(function(){
+	var name = prompt("추가할 이름을 입력하세요");
+	if($.trim(name)){// 데이터를 입력하고 확인 버튼을 클릭한 경우
+	var no = Number($('tbody>tr:last>td').eq(0).text());
+	
+	//tbody에 추가할 <tr>엘리먼트를 작성합니다.
+	var output= '<tr><td>' + (no+1) + '</td>';
+	output += '<td>' + name + '</td></tr>';
+	
+	//output을 tbody의 마지막 자식으로 추가합니다.
+	$('tbody').append(output);
+		
+		}
+		
+	});
+</script>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<td>번호</td>
+				<td>이름</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>자바</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>HTML</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>CSS</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>자바스크립트</td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.js"></script>
+	<!-- 문서 객체 삽입 -->
+	<!-- $(A).append(B) : B를 A의 마지막 자식에 추가합니다.
+		형식) $(selector).append(content, content, ...);
+			$(selector).append(function(index){});  -->
+	<script>
+		$(document).ready(function() {
+			$('div').append(function(index){
+							return "<span>좋아요"+index+"</span>";
+			})
+		})
+	</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	
+
+</body>
+</html>

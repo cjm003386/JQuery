@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.js"></script>
+<!--  문서 객체 삽입 -->
+<!-- B를 A자식 위에 붙임
+ -->
+ <script>
+ 	$(document).ready(function (){
+ 		//변수를 선언합니다.
+ 		var h1 = '<h1>화요일</h1>';
+ 		var h2 = '<h1>수요일</h1>';
+ 		var h3 = '<h1>월요일</h1>';
+ 		//문서 객체를 추가합니다.
+ 		//h1, h2를 div 태그의 마지막 자식에 추가합니다.
+ 		$('div').append(h1, h2);
+ 		
+ 		//h3을 div 태그의 맨 처음 자식에 추가합니다.
+ 		$('div').prepend(h3);
+ 	});
+ </script>
+</head>
+<body>
+	<div>내 뒤에 붙거라</div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.js"></script>
+<!--  trigger() : 이벤트를 강제로 발생 시킵니다.
+				형식) trigeger(eventname)
+ -->
+<script>
+	$(document).ready(function(){
+		//이벤트를 연결합니다.
+		$('h1').click(function(){
+			$(this).html(function( index, html){
+				console.log(index + html)
+				return html + '★';
+			});
+		});
+		
+		/*4. clearInterval(id) : 일정 시간 후 함수를 반복하는 것을 중단합니다.
+		여기서 id는 setTimeout()함수와 setInterval()함수를 사용하면
+		타이머 아이디를 리턴하는데 이 아이디를 매개 변수에 넣어주면 타이머를
+		정지할 수 있습니다.*/ 
+		
+		$('#end').click(function(){
+			alert("트리거 종료");
+			clearInterval(timer);
+			
+		});
+		
+		// 1초마다 함수를 실행합니다.
+		// 마지막에 위치한 h1태그는 자동으로 1초마다 클릭 이벤트를 실행합니다.
+		var timer = setInterval(function(){
+			//$('h1').last().trigger('click');
+			//$('h1').eq(-1).trigger('click');
+			$('h1:last').trigger('click');
+		},1000);
+		
+		
+	});
+</script>
+</head>
+<body>
+	<h1>Start: </h1>
+	<h1>Start: </h1>
+	<input type="button" value="트리거 종료" id="end">
+</body>
+</html>

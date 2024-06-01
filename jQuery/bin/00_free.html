@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.js"></script>
+<script>
+$(document).ready(function(){
+	var arr = ['월','화','수'];
+	$('div').click(function(){
+		$(this).html(function(index, html){
+		return html + arr[$(this).index()];
+		});
+	});
+});
+
+</script>
+</head>
+<body>
+	<div>월요일</div>
+	<div>화요일</div>
+	<div>수요일</div>
+
+</body>
+</html>

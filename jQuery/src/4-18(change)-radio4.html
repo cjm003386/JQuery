@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$('input:radio').change(function(event){
+			alert($(this).val());
+		});
+	});
+</script>
+</head>
+<body>
+
+	<label>
+		<input type="radio" name="hoho" value="1">사과
+	</label>	
+	
+	<label>
+		<input type="radio" name="hoho" value="2">배
+	</label>
+	
+	<label>
+		<input type="radio" name="hoho" value="3">복숭아
+	</label>		
+	
+
+</body>
+</html>

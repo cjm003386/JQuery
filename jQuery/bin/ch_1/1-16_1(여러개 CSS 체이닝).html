@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.js"></script>
+
+	
+	 <script>
+	$(document).ready(function(){
+		var name = prompt("이름을 입력하세요","홍길동");
+		//선택한 객체에 대해 메서드를 연속적으로 사용할 수 있는 기법을 체이닝(chaining) 기법이라고 합니다.
+		
+		/*
+		$('input:text').val(name)
+						.css('color','green')
+						.css('background-color', 'orange')
+						.css('font-size','50px')
+						.css('height','50px');
+					*/
+		$('input:text').val(name)
+					   .css({
+						  'color' : 'green',
+					   	  'background' : 'orange',
+					   	  'height':'50px',
+					   	  'font-size':'50px'
+					   
+						});
+	
+	
+	}); 
+	 </script>
+</head>
+<body>
+    <input type="text" placeholder="이름">
+
+</html>
